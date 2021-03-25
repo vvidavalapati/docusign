@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="width: 85%; margin: 0 7.5%;">
+      <div style="text-align: center; padding-left: 50px;">
+        <h3>Commissions Report</h3>
+        <table style=' width: 100%; height: auto;font-size: 11px;font-family: sans-serif, Arial, Helvetica; border-collapse: collapse;'>
+          <tr>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Company Code</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Agency ID</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Effective Date</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Agent ID</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Master ID</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Trans Type</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Trans Description</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Product Description</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Annt Name</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Agent Name</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>BD Account Number</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Issue Date</th>
+            <th style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'>Premium Amount</th>
+          </tr>
+          <% if (commissions.length > 0) { %>
+            <% commissions.forEach(commission => {%>
+              <tr>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.companyCode %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.agencyId %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.effectiveDate %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.agentId %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.masterId %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.transType %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.transDesc %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.prodDesc %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.anntName %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.agentName %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.bdAccountNum %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.issueDate %></td>
+                <td style='max-width: 5mm;border: 1px solid #000;overflow: hidden;word-wrap: break-word;'><%= commission.premiumAmt %></td>
+
+              </tr>
+            <% }); %>
+          <% } %>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

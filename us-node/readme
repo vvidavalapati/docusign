@@ -1,0 +1,18 @@
+1. npm install -> To install required dependencies
+2. npm start -> To start the app
+3. http://localhost:3000/api/v1/commissions/get - Paste this link in browser and press enter. This API will give list of commissions.
+4. http://localhost:3000/api/v1/commissions/csv - This API downloads commissions in CSV file.
+5. http://localhost:3000/api/v1/commissions/pdf - This API downloads commissions in PDF file.
+
+# To get individual consent from docusign, use following url
+# Replace client id with app integration key
+
+https://account-d.docusign.com/oauth/auth?
+  response_type=code&
+  scope=signature%20impersonation&
+  client_id=a4d34586-eca2-4f4f-b344-30604edc2287&
+  redirect_uri=http://localhost:3000/api/v1/docusign/auth/callback
+
+# Disable suppress embedded emails under Signing settings in Docusign account
+
+# Replace public & private keys with your docusign account
